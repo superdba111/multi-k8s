@@ -17,4 +17,3 @@ spec:
             backend:
               serviceName: server-cluster-ip-service
               servicePort: 5000
-
