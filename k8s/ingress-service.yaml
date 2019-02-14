@@ -7,8 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: k8s-multi.com
-      http:
+    - http:
         paths:
           - path: /
             backend:
@@ -18,14 +17,4 @@ spec:
             backend:
               serviceName: server-cluster-ip-service
               servicePort: 5000
-    - host: www.k8s-multi.com
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: client-cluster-ip-service
-              servicePort: 3000
-          - path: /api/
-            backend:
-              serviceName: server-cluster-ip-service
-              servicePort: 5000
+
